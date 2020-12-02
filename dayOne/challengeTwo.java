@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.io.FileNotFoundException;
 import java.io.File;
 
-public class day1 {
+public class challengeTwo {
     public static void main(String[] args) {
         int target = 2020;
         ArrayList<Integer> expenseList = new ArrayList<Integer>();
@@ -25,6 +25,7 @@ public class day1 {
                     }
                 }
             }
+            scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Houston, we have no file.");
         }
