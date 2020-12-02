@@ -16,8 +16,8 @@ public class day1 {
                 expenseList.add(Integer.parseInt(scanner.nextLine()));
             }
 
-            for (int i = 0; i < expenseList.size(); i++) {
-                for (int j = 0; j < expenseList.size(); j++) {
+            for (int i : expenseList) {
+                for (int j : expenseList) {
                     if (i + j == target) {
                         System.out.println(i * j);
                     }

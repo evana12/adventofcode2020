@@ -16,10 +16,12 @@ public class day1 {
                 expenseList.add(Integer.parseInt(scanner.nextLine()));
             }
 
-            for (int i = 0; i < expenseList.size(); i++) {
-                for (int j = 0; j < expenseList.size(); j++) {
-                    if (i + j == target) {
-                        System.out.println(i * j);
+            for (int i : expenseList) {
+                for (int j : expenseList) {
+                    for (int k : expenseList) { 
+                        if (i + j + k == target) {
+                            System.out.println(i * j * k);
+                        }
                     }
                 }
             }
