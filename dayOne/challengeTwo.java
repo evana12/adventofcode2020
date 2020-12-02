@@ -26,7 +26,7 @@ public class day1 {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("File wasn't found");
+            System.out.println("Houston, we have no file.");
         }
     }
 }
