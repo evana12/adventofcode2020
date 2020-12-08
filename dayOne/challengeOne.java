@@ -7,9 +7,13 @@ public class challengeOne {
     public static void main(String[] args) {
         int target = 2020;
         ArrayList<Integer> expenseList = new ArrayList<Integer>();
-
+        String home = System.getProperty("user.dir");
+        System.out.println("User home directory is: " + home);
+        File userHome = new File(home);
+        // Put files in a known and reproducible path!
+        
         try {
-            File file = new File("expenses.txt");
+            File file = new File(userHome, "expenses.txt");
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
