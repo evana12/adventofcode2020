@@ -1,12 +1,10 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.io.FileNotFoundException;
 import java.io.File;
 
 public class challengeOne {
     public static void main(String[] args) {
         int target = 2020;
-        ArrayList<Integer> expenseList = new ArrayList<Integer>();
         String home = System.getProperty("user.dir");
         System.out.println("User home directory is: " + home);
         File userHome = new File(home);
@@ -15,15 +13,16 @@ public class challengeOne {
         try {
             File file = new File(userHome, "expenses.txt");
             Scanner scanner = new Scanner(file);
-
-            while (scanner.hasNextLine()) {
-                expenseList.add(Integer.parseInt(scanner.nextLine()));
+            Integer[] list = new Integer[200];
+            
+            for (int i = 0; i < list.length; i++) {
+                list[i] = Integer.parseInt(scanner.nextLine());
             }
 
-            for (int i : expenseList) {
-                for (int j : expenseList) {
-                    if (i + j == target) {
-                        System.out.println(i * j);
+            for (int i = 0; i < list.length; i++) {
+                for (int j = 0; j < list.length; j++) {
+                    if (list[i] + list[j] == target) {
+                        System.out.println(list[i] * list[j]);
                     }
                 }
             }
