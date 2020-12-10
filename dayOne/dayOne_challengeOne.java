@@ -2,13 +2,12 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
 
-public class challengeOne {
+public class dayOne_challengeOne {
     public static void main(String[] args) {
         int target = 2020;
         String home = System.getProperty("user.dir");
         System.out.println("User home directory is: " + home);
         File userHome = new File(home);
-        // Put files in a known and reproducible path!
         
         try {
             File file = new File(userHome, "expenses.txt");
